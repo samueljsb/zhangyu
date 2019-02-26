@@ -22,6 +22,8 @@ function click_start () {
     400
   ]
   var delay = delays[speed.value / 10]
+  document.getElementById('instruction').innerHTML = 'en-garde'
+  call_move('en-garde')
   window.instructor = setInterval(run_zhangyu, delay)
 }
 
