@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Zhangyu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+  </head>
+
+  <body>
+    <div class="header">
+      <img src="assets/logo.png" class="logo">
+      <h1>Zhangyu for Taijiquan</h1>
+    </div>
+    <div class="content">
+      <h3>Select movements:</h3>
+      <div class="row">
+        <div class="column">
+          <input type="checkbox" id="shift" value="shift" checked> shift<br>
+          <input type="checkbox" id="switch" value="switch" checked> switch<br>
+          <input type="checkbox" id="forwards" value="forwards" checked> forwards<br>
+          <input type="checkbox" id="backwards" value="backwards" checked> backwards<br>
+        </div>
+        <div class="column">
+          <input type="checkbox" id="inside" value="inside"> inside<br>
+          <input type="checkbox" id="outside" value="outside"> outside<br>
+          <input type="checkbox" id="turn-in" value="turn in"> turn in<br>
+          <input type="checkbox" id="turn-out" value="turn out"> turn out<br>
+        </div>
+      </div>
+      <div class="slidecontainer">
+        <h3>Select speed:</h3>
+        <input type="range" min="0" max="100" step="10" value="30" class="slider" id="speed">
+        <span class="first">octopus</span>
+        <span class="last">Bruce Lee</span>
+      </div>
+      <div class="instruction">
+        <h1><span id="instruction">&nbsp</span></h1>
+      </div>
+      <div class="buttons">
+        <button id="start" type="button" onclick="click_start();">Start</button>
+        <button id="stop" type="button" onclick="click_stop();" disabled=true>Stop</button>
+      </div>
+      <div class="description">
+        <p>
+          Zhāngyú (章魚) is Mandarin for octopus: a creature with 8 legs, which means it has every excuse to be
+          uncoordinated. You (probably) do not have 8 legs. Don't be an octopus.
+        </p>
+      </div>
+    </div>
+    <footer>
+      Copyright 2019 Samuel Searles-Bryant
+    </footer>
+  </body>
+  <script src="zhangyu.js"></script>
+
+</html>
