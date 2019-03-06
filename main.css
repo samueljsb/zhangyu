@@ -66,6 +66,12 @@ opacity: 1;
     text-align: right;
 }
 
+.slidecontainer > span.warning{
+    color: red;
+    font-size: 10px;
+    text-align: left;
+    visibility: hidden;
+}
 
 .instruction {
     background-color: darkgrey;

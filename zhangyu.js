@@ -2,9 +2,11 @@ function click_start () {
   var start_button = document.getElementById('start')
   var stop_button = document.getElementById('stop')
   var slider = document.getElementById('speed')
+  var warning = document.getElementById('slider-warning')
   start_button.disabled = true
   stop_button.disabled = false
   slider.disabled = true
+  warning.style.visibility = 'visible';
 
   const delays = [
     3000,
@@ -31,9 +33,11 @@ function click_stop () {
   var start_button = document.getElementById('start')
   var stop_button = document.getElementById('stop')
   var slider = document.getElementById('speed')
+  var warning = document.getElementById('slider-warning')
   start_button.disabled = false
   stop_button.disabled = true
   slider.disabled = false
+  warning.style.visibility = 'hidden';
 
   clearInterval(window.instructor)
   document.getElementById('instruction').innerHTML = '&nbsp'
