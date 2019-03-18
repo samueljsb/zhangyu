@@ -6,7 +6,7 @@ function click_start () {
   start_button.disabled = true
   stop_button.disabled = false
   slider.disabled = true
-  warning.style.visibility = 'visible';
+  warning.style.visibility = 'visible'
 
   const delays = [
     3000,
@@ -23,7 +23,7 @@ function click_start () {
     450,
     400
   ]
-  var delay = delays[speed.value / 10]
+  var delay = delays[speed.value]
   document.getElementById('instruction').innerHTML = 'en-garde'
   call_move('en-garde')
   window.instructor = setInterval(run_zhangyu, delay)
@@ -37,7 +37,7 @@ function click_stop () {
   start_button.disabled = false
   stop_button.disabled = true
   slider.disabled = false
-  warning.style.visibility = 'hidden';
+  warning.style.visibility = 'hidden'
 
   clearInterval(window.instructor)
   document.getElementById('instruction').innerHTML = '&nbsp'

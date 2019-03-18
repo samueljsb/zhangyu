@@ -1,129 +1,26 @@
 body {
     margin: 0 auto;
     padding: 20px;
-    font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
     max-width: 750px;
-    width: auto;
-    background: #EEE;
 }
 
 .header img {
     float: right;
-    width: 100px;
-    height: 100px;
-  }
-
-  .header h1 {
-    position: relative;
-    top: 18px;
-    left: 10px;
-  }
-
-.content {
-    margin: 60px 10px;
-    background: #DDD;
-    padding: 20px;
+    width: 70px;
+    height: 70px;
 }
 
 div.mobile-warning {
-    color: red;
-    background: black;
-    text-align: center;
     display: none;
 }
 
-.row {
-    display: flex;
-}
-
-.column {
-    flex: 50%;
-}
-
-.options input {
-    padding: 10px;
-}
-
-.slidecontainer {
-    width: 100%;
-}
-
-.slider {
-appearance: none;
-width: 100%;
-opacity: 0.7;
-transition: opacity .2s;
-}
-
-.slider:hover {
-opacity: 1;
-}
-
-.slidecontainer > span {
-    display: inline-block;
-    text-align: center;
-    width: 49%;
-}
-
-.slidecontainer > span.first {
-    text-align: left;
-}
-
-.slidecontainer > span.last {
-    text-align: right;
-}
-
-.slidecontainer > span.warning{
-    color: red;
-    font-size: 10px;
-    text-align: left;
+#slider-warning{
     visibility: hidden;
 }
 
 .instruction {
-    background-color: darkgrey;
-    padding: 10px;
-    margin: 30px;
     text-align: center;
-}
-
-.buttons {
-    background: #DDD;
-    padding: 10px 20px;
-}
-
-.buttons {
-    text-align:center;
-}
-
-button {
-    padding: 12px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    width: 30%;
-    display: inline-block;
-    margin: 20px 40px;
-    cursor: pointer;
-}
-
-button:disabled {
-    background-color: gray;
-}
-
-#start:enabled {
-    background-color: green;
-    color: white;
-}
-
-#stop:enabled {
-    background-color: red;
-}
-
-footer {
-    position: relative;
-    width: 100%;
-    margin: -40px 0;
+    margin: 0 0 60px 0;
 }
 
 @media only screen and (max-device-width:480px) {
