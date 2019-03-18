@@ -1,3 +1,30 @@
+const all_moves = [
+  'shift',
+  'switch',
+  'forwards',
+  'backwards',
+  'inside',
+  'outside',
+  'turn-in',
+  'turn-out'
+]
+
+const delays = [
+  3000,
+  2500,
+  2000,
+  1500,
+  1000,
+  850,
+  700,
+  600,
+  580,
+  560,
+  500,
+  450,
+  400
+]
+
 function click_start () {
   var start_button = document.getElementById('start')
   var stop_button = document.getElementById('stop')
@@ -8,21 +35,15 @@ function click_start () {
   slider.disabled = true
   warning.style.visibility = 'visible'
 
-  const delays = [
-    3000,
-    2500,
-    2000,
-    1500,
-    1000,
-    850,
-    700,
-    600,
-    580,
-    560,
-    500,
-    450,
-    400
-  ]
+  // Initialise all of the audio files
+  document.getElementById('en-garde-audio').play()
+  document.getElementById('en-garde-audio').pause()
+  for (idx in all_moves) {
+    var audio_id = all_moves[idx] + '-audio'
+    document.getElementById(audio_id).play()
+    document.getElementById(audio_id).pause()
+  }
+
   var delay = delays[speed.value]
   document.getElementById('instruction').innerHTML = 'en-garde'
   call_move('en-garde')
@@ -44,17 +65,6 @@ function click_stop () {
 }
 
 function run_zhangyu () {
-  const all_moves = [
-    'shift',
-    'switch',
-    'forwards',
-    'backwards',
-    'inside',
-    'outside',
-    'turn-in',
-    'turn-out'
-  ]
-
   var moves = []
   var idx
   for (idx in all_moves) {
@@ -70,7 +80,6 @@ function run_zhangyu () {
 }
 
 function call_move (name) {
-  var fname = 'assets/audio/' + name + '.mp3'
-  var audio = new Audio(fname)
-  audio.play()
+  var audio_id = name + '-audio'
+  document.getElementById(audio_id).play()
 }
