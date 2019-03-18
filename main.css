@@ -25,6 +25,13 @@ body {
     padding: 20px;
 }
 
+div.mobile-warning {
+    color: red;
+    background: black;
+    text-align: center;
+    display: none;
+}
+
 .row {
     display: flex;
 }
@@ -80,10 +87,6 @@ opacity: 1;
     text-align: center;
 }
 
-#instruction {
-
-}
-
 .buttons {
     background: #DDD;
     padding: 10px 20px;
@@ -121,4 +124,10 @@ footer {
     position: relative;
     width: 100%;
     margin: -40px 0;
+}
+
+@media only screen and (max-device-width:480px) {
+    div.mobile-warning {
+        display: block;
+    }
 }
