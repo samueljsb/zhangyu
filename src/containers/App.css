@@ -1,0 +1,30 @@
+body {
+  background-color: #282c34;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 750px;
+}
+
+.App-header {
+  padding: 0 15px;
+  align-items: center;
+}
+
+.App-logo {
+  float: right;
+  width: 70px;
+  height: 70px;
+}
+
+.App-footer {
+  color: grey;
+  padding: 0 15px;
+}
